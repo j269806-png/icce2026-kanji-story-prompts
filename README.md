@@ -3,6 +3,7 @@ Prompt templates and materials for ICCE2026 paper on kanji story generation.
 
 ## Paper
 [Investigating Oddness Annotation Ambiguity in LLM-Generated Stories for Elementary School Kanji Learning]
+
 [Kento YOSHIMURA, Kouta NAKAYAMA, Takashi KODAMA, Momoka FURUHASHI, & Kyosuke TAKAMI]
 Submitted to ICCE 2026 (34th International Conference on Computers in Education)
 
