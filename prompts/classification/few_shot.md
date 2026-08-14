@@ -14,7 +14,7 @@ client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 MAX_CONCURRENT_REQUESTS = 5
 
-# 改善1: モデルごとにセマフォを分ける
+ 改善1: モデルごとにセマフォを分ける
 _semaphores: dict[str, asyncio.Semaphore] = {}
 
 def get_semaphore(model_name: str) -> asyncio.Semaphore:
