@@ -16,7 +16,7 @@ hero_name = "ゆうき"
 
 
 def build_prompt(selected_kanji, grade, age, hero_name, max_chars, story_type=None):
-    # python用に変換したプロンプト
+
     prompt = (
         f"あなたはプロの作家です。"
         f"ゴール「{selected_kanji}」という字を必ず使って、{grade}年生（{age}歳）でも楽しめる物語を作成します。"
@@ -34,7 +34,7 @@ for kanji in kanji_list:
     try:
         prompt = build_prompt(kanji, grade, age, hero_name, max_chars)
 
-        time.sleep(1) #apiのレートリミットを回避するため設定してます。
+        time.sleep(1)
 
         response = client.chat.completions.create(
             model="gpt-4o-mini",
@@ -47,7 +47,6 @@ for kanji in kanji_list:
     except Exception as e:
         print(f"エラー発生：{kanji} → {e}")
 
-# 保存（json）
 import json
 with open("stories.json", "w", encoding="utf-8") as f:
     json.dump(results, f, ensure_ascii=False, indent=2)
