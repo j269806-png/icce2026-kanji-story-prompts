@@ -49,5 +49,5 @@ for kanji in kanji_list:
 
 　# 保存（json）
 import json
-with open("4omini-few-shot.json", "w", encoding="utf-8") as f:
+with open("stories.json", "w", encoding="utf-8") as f:
     json.dump(results, f, ensure_ascii=False, indent=2)
